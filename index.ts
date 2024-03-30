@@ -25,16 +25,16 @@ let value = await inquirer.prompt([
 let result;
 
 if(value.operator === '+') {
-    result = value.firstValue + value.secondValue;
+    result = parseInt(value.firstValue) + parseInt(value.secondValue);
 }
 else if(value.operator === '-') {
-    result = value.firstValue - value.secondValue;
+    result = parseInt(value.firstValue) - parseInt(value.secondValue);
 }
 else if(value.operator === '*') {
-    result = value.firstValue * value.secondValue;
+    result = parseInt(value.firstValue) * parseInt(value.secondValue);
 }
 else {
-    result = value.firstValue / value.secondValue;
+    result = parseInt(value.firstValue) / parseInt(value.secondValue);
 }
 
 console.log(`Result is ${result}`);
